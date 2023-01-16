@@ -2,6 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.19.
 
+💡 This project goal is to test some development strategies regarding web accessibility based on WCAG. For example:
+
+- Button group using Radio group role
+  -- ARIA attributes
+  -- role attributes
+  -- Some strategies for Screen Reader
+  -- Keyborad navigation
+- Modal/dialog
+  -- ARIA attributes
+  -- Some strategies for Screen Reader
+  -- Keyborad navigation
+  ---- Focus trap
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

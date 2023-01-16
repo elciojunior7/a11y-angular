@@ -1,0 +1,30 @@
+<div appKeyboardManager
+    role="radiogroup" 
+    aria-labelledby="label"
+    class="button-group">
+    <label id="label">{{ label }}</label>
+    <button appKeyboardManagedItem
+        role="radio"
+        [attr.aria-checked]="yesNoValue"
+        [attr.tabindex]="yesNoValue ? 0 : -1"
+        [attr.disabled]="disabled ? disabled : null"
+        (focusedChange)="activate(true)"
+        [ngClass]="{'pressed': yesNoValue}" 
+        (click)="activate(true)" 
+        class="button button-yes" 
+        type="button">
+        Yes
+    </button>
+    <button appKeyboardManagedItem
+        role="radio"
+        [attr.aria-checked]="yesNoValue === false"
+        [attr.tabindex]="!yesNoValue ? 0 : -1"
+        [attr.disabled]="disabled ? disabled : null"
+        (focusedChange)="activate(false)"
+        [ngClass]="{'pressed': yesNoValue === false                 }" 
+        (click)="activate(false)" 
+        class="button button-no" 
+        type="button">
+        No
+    </button>
+</div>

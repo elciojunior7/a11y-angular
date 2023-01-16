@@ -1,0 +1,55 @@
+$background-button-pressed: #0FC7FF;
+.button-group{
+    .label{
+        margin-right: 0.5rem;
+    }
+    .button{
+        border: 1px solid #aeb6c6;
+        padding: 0.5rem 0.75rem;
+        margin: 0;
+        color: black;
+        background-color: white;
+
+        &.button-yes{
+            border-radius: 5px 0 0 5px;
+        }
+
+        &.button-no{
+            border-radius: 0 5px 5px 0;
+        }
+
+        &.pressed {
+            background-color: $background-button-pressed;
+            border-color: $background-button-pressed;
+            box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, .2);
+        }
+    }
+    .radio {
+        position: relative;
+        display: inline-block;
+        // com input radio, se quiser esconder o check (bolinha)
+        // é preciso zerar o opacity. Não se pode fazer usar algo 
+        // como display: none porque o leitor de tela procura pelo
+        // input na hora de dar foco, e se ele não existir,
+        // o leitor não irá ler.
+        // Além disso, move-se o input para ele passar a ficar 
+        // sobre a label/botão e atingir o layout desejado de
+        // dois botôes, um ao lado dou outro.
+        input {
+          opacity: 0;
+          position: absolute;
+          top: 25%;
+          left: 25%;
+          &:focus + label {
+            outline: solid 1px #272c3f;
+          }
+          // @extend permite herdar os estilos do seletor .pressed
+          &:checked + label {
+            @extend .pressed;
+          }
+        }
+        label {
+          display: block;
+        }
+      }
+}

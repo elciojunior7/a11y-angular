@@ -1,0 +1,22 @@
+<div 
+    [attr.aria-label]="label"
+    class="button-group"
+    role="radiogroup">
+    <label>{{ label }}</label>
+    <div class="radio">
+        <input 
+            id="radio-yes"
+            type="radio"
+            name="yesNoRadio"
+            (change)="activate(true)"/>
+        <label for="radio-yes" class="button button-yes">Yes</label>
+    </div>
+    <div class="radio">
+        <input 
+            id="radio-no"
+            type="radio"
+            name="yesNoRadio"
+            (change)="activate(false)"/>
+        <label for="radio-no" class="button button-no">No</label>
+    </div>
+</div>
