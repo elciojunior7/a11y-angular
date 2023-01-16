@@ -5,15 +5,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 💡 This project goal is to test some development strategies regarding web accessibility based on WCAG. For example:
 
 - Button group using Radio group role
-  -- ARIA attributes
-  -- role attributes
-  -- Some strategies for Screen Reader
-  -- Keyborad navigation
+  - ARIA attributes
+  - role attributes
+  - Some strategies for Screen Reader
+  - Keyborad navigation
 - Modal/dialog
-  -- ARIA attributes
-  -- Some strategies for Screen Reader
-  -- Keyborad navigation
-  ---- Focus trap
+  - ARIA attributes
+  - Some strategies for Screen Reader
+  - Keyborad navigation
+    - Focus trap
+- Some Angular techniques more advanced
 
 ## Development server
 
